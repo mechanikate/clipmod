@@ -3,15 +3,15 @@ Only in ./: .git
 Only in ./: .gitignore
 Only in ./: .replit
 Only in ./: README.md
-Only in paperclips/docs/: apple_badge.svg
+Only in original/: apple_badge.svg
 Only in ./: apply.sh
 Only in ./: clipmod.js
 Only in ./: clipmod.png
 Only in ./: dfile.patch
 Only in ./: exampleMod.js
-Only in paperclips/docs/: google_badge.svg
-diff -crB paperclips/docs/index.html ./index.html
-*** paperclips/docs/index.html	2017-11-14 09:38:17.000000000 -0500
+Only in original/: google_badge.svg
+diff -crB original/index.html ./index.html
+*** original/index.html	2017-11-14 09:38:17.000000000 -0500
 --- ./index.html	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,8 ****
@@ -65,8 +65,8 @@ diff -crB paperclips/docs/index.html ./index.html
       
 !     </body>
 \ No newline at end of file
-diff -crB paperclips/docs/index2.html ./index2.html
-*** paperclips/docs/index2.html	2018-02-03 17:00:23.000000000 -0500
+diff -crB original/index2.html ./index2.html
+*** original/index2.html	2018-02-03 17:00:23.000000000 -0500
 --- ./index2.html	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,17 ****
@@ -213,8 +213,8 @@ diff -crB paperclips/docs/index2.html ./index2.html
           
       </body>
 ! </html>
-diff -crB paperclips/docs/interface.css ./interface.css
-*** paperclips/docs/interface.css	2017-11-21 15:50:22.000000000 -0500
+diff -crB original/interface.css ./interface.css
+*** original/interface.css	2017-11-21 15:50:22.000000000 -0500
 --- ./interface.css	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,108 ****
@@ -361,8 +361,8 @@ diff -crB paperclips/docs/interface.css ./interface.css
       height: 60px;
       width: 275px;
 --- 635,640 ----
-diff -crB paperclips/docs/main.js ./main.js
-*** paperclips/docs/main.js	2018-02-03 17:00:22.000000000 -0500
+diff -crB original/main.js ./main.js
+*** original/main.js	2018-02-03 17:00:22.000000000 -0500
 --- ./main.js	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 5,13 ****
@@ -5792,10 +5792,10 @@ diff -crB paperclips/docs/main.js ./main.js
       project51.priceTag =  "(" + qChipCost + " ops)";
       
       
-Only in paperclips/docs/: mobile-title.png
-Only in ./: paperclips
-diff -crB paperclips/docs/projects.js ./projects.js
-*** paperclips/docs/projects.js	2018-02-03 17:00:23.000000000 -0500
+Only in original/: mobile-title.png
+Only in ./: original
+diff -crB original/projects.js ./projects.js
+*** original/projects.js	2018-02-03 17:00:23.000000000 -0500
 --- ./projects.js	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 14,27 ****
@@ -8720,8 +8720,8 @@ diff -crB paperclips/docs/projects.js ./projects.js
       }
 Only in ./: script.js
 Only in ./: style.css
-diff -crB paperclips/docs/titlescreen.css ./titlescreen.css
-*** paperclips/docs/titlescreen.css	2017-11-17 06:24:24.000000000 -0500
+diff -crB original/titlescreen.css ./titlescreen.css
+*** original/titlescreen.css	2017-11-17 06:24:24.000000000 -0500
 --- ./titlescreen.css	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,108 ****
