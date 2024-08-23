@@ -14,4 +14,4 @@ done
 
 cd ..
 
-diff -crB ./ paperclips/docs/ > dfile.patch
+diff -crB paperclips/docs/ ./ > dfile.patch
