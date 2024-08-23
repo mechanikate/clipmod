@@ -5,14 +5,14 @@ Only in ./: .replit
 Only in ./: README.md
 Only in paperclips/docs/: apple_badge.svg
 Only in ./: apply.sh
-Only in ./: clipmod
 Only in ./: clipmod.js
 Only in ./: clipmod.png
 Only in ./: dfile.patch
+Only in ./: exampleMod.js
 Only in paperclips/docs/: google_badge.svg
 diff -crB paperclips/docs/index.html ./index.html
 *** paperclips/docs/index.html	2017-11-14 09:38:17.000000000 -0500
---- ./index.html	2020-12-04 22:01:02.000000000 -0500
+--- ./index.html	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,8 ****
   <html>
@@ -67,7 +67,7 @@ diff -crB paperclips/docs/index.html ./index.html
 \ No newline at end of file
 diff -crB paperclips/docs/index2.html ./index2.html
 *** paperclips/docs/index2.html	2018-02-03 17:00:23.000000000 -0500
---- ./index2.html	2024-08-22 23:52:03.860890150 -0400
+--- ./index2.html	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,17 ****
 ! <html>
@@ -215,7 +215,7 @@ diff -crB paperclips/docs/index2.html ./index2.html
 ! </html>
 diff -crB paperclips/docs/interface.css ./interface.css
 *** paperclips/docs/interface.css	2017-11-21 15:50:22.000000000 -0500
---- ./interface.css	2020-12-04 22:01:00.000000000 -0500
+--- ./interface.css	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,108 ****
 - #mobile
@@ -363,7 +363,7 @@ diff -crB paperclips/docs/interface.css ./interface.css
 --- 635,640 ----
 diff -crB paperclips/docs/main.js ./main.js
 *** paperclips/docs/main.js	2018-02-03 17:00:22.000000000 -0500
---- ./main.js	2024-08-22 22:06:34.325723204 -0400
+--- ./main.js	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 5,13 ****
       threnodyLoadedBool = true; 
@@ -5793,11 +5793,10 @@ diff -crB paperclips/docs/main.js ./main.js
       
       
 Only in paperclips/docs/: mobile-title.png
-Only in ./: obscenePowerMod.js
 Only in ./: paperclips
 diff -crB paperclips/docs/projects.js ./projects.js
 *** paperclips/docs/projects.js	2018-02-03 17:00:23.000000000 -0500
---- ./projects.js	2020-12-04 22:01:02.000000000 -0500
+--- ./projects.js	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 14,27 ****
       uses: 1,
@@ -8719,13 +8718,11 @@ diff -crB paperclips/docs/projects.js ./projects.js
           var index = activeProjects.indexOf(project219);
           activeProjects.splice(index, 1);
       }
-Only in ./: replit.nix
-Only in ./: replit_zip_error_log.txt
 Only in ./: script.js
 Only in ./: style.css
 diff -crB paperclips/docs/titlescreen.css ./titlescreen.css
 *** paperclips/docs/titlescreen.css	2017-11-17 06:24:24.000000000 -0500
---- ./titlescreen.css	2020-12-04 22:01:02.000000000 -0500
+--- ./titlescreen.css	2024-08-23 00:09:25.672228196 -0400
 ***************
 *** 1,108 ****
 ! .frame 
