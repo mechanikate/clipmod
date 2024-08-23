@@ -29,40 +29,42 @@ class Project {
 		this.obj = {};
 		
 	}
+	priceTag() {
+		let result = [];
+		if(typeof this.price["operations"] === "number") result.push(`${this.price["operations"]} ops`);
+		if(typeof this.price["trust"] === "number") result.push(`${this.price["trust"]} trust`);
+		if(!result.length) return "";
+		return `(${result.join(", ")})`;
+	}
 	setup() {
 		this.obj.id = this.modid+"Button"+this.pid;
 		this.obj.title = this.name+" ";
-		this.obj.priceTag = "("+this.price[0]+" "+this.price[1]+")";
+		this.obj.priceTag = this.priceTag();
 		this.obj.description = this.description;
-		if(this.price[1] == "operations") {
-			this.obj.trigger = () => { return operations>=this.requirement[0]};
-		} else if(this.requirement[1] == "trust") {
-			this.obj.trigger = () => { return trust>=this.requirement[0]};
-		} else if(this.requirement[1] == "clipmaker_level") {
-			this.obj.trigger = () => { return clipmakerLevel>=this.requirement[0]};
-		} else {
-			throw new TypeError("Type not \"operations\" or \"trust\"");
-			return 0;
+		var localOperationsPrice = this.price["operations"];
+		var localTrust = this.requirement["trust"];
+		var localTrustPrice = this.price["trust"];
+		var localClipmakerLevel = this.requirement["clipmaker_level"];
+		this.obj.trigger = () => {
+			if(typeof localOperationsPrice === "number" && operations<localOperationsPrice) return false;
+			if(typeof localTrust === "number" && trust<localTrust) return false;
+			if(typeof localClipmakerLevel === "number" && clipmakerLevel<localClipmakerLevel) return false;
+			return true;
 		}
 		this.obj.uses = this.uses;
-		if(this.price[1] == "operations") {
-			this.obj.cost = () => { return operations>=this.price[0]};
-		} else if(this.price[1] == "trust") {
-			this.obj.cost = () => { return trust>=this.price[0]};
-		} else {
-			throw new TypeError("Type not \"operations\" or \"trust\"");
-			return 0;
-		}
+		this.obj.cost = () => {
+			if(typeof localOperationsPrice === "number" && operations<localOperationsPrice) return false;
+			if(typeof localTrustPrice === "number" && trust<localTrustPrice) return false;
+			return true;
+	
+		};
 		this.obj.flag = moddedPurchased.includes(this.obj.id) | 0;
 		this.obj.effect = () => {
 			this.obj.flag = 1;
 			displayMessage(this.display);
 			this.todo();
-			if(this.price[1] == "operations") {
-				standardOps -= this.price[0];
-			} else if(this.price[1] == "trust") {
-				trust -= this.price[0];
-			}
+			standardOps -= typeof this.price["operations"] === "number" ? this.price["operations"] : 0;
+			trust -= typeof this.price["trust"] === "number" ? this.price["trust"] : 0;
 			var element = document.getElementById(this.obj.id);
 			element.parentNode.removeChild(element);
 			var index = activeProjects.indexOf(this.obj);
